@@ -19,6 +19,20 @@ CS-3DGS first generates foreground-background priors from 2D semantic cues and a
 - Budget-controlled clone and split densification
 - Compatibility with attribute-level compression tools
 
+## Pretrained Models & Weights
+
+CS-3DGS relies on the following pretrained models for foreground-background prior generation and semantic understanding. Please download the corresponding weights and place them in the designated directories.
+
+| Model | Weights File | Source / Download Link | Usage |
+|-------|--------------|------------------------|--------|
+| **BiRefNet** | `BiRefNet-general-epoch_244.pth` | [HuggingFace Hub](https://huggingface.co/ZhengPeng7/BiRefNet) or [Official GitHub](https://github.com/ZhengPeng7/BiRefNet) | High-resolution dichotomous image segmentation for foreground probability map |
+| **SAM (Segment Anything Model)** | `sam_vit_h_4b8939.pth` | [SAM Official Repository](https://github.com/facebookresearch/segment-anything) | Object boundary constraints and mask proposals for region refinement |
+| **SAM 2** | `sam2_hiera_large.pt` | [SAM 2 Official Repository](https://github.com/facebookresearch/segment-anything-2) | Enhanced mask generation for more robust foreground/background separation |
+
+
+
+
+
 ## Code
 
 The code will be released after the paper is published.
